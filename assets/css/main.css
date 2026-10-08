@@ -229,10 +229,28 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/* Navmenu - Desktop */
-@media (min-width: 1200px) {
+/* ==========================================================
+   Navigation Menu
+========================================================== */
+
+/* ----------------------------------------------------------
+   Hamburger - Hidden by default
+---------------------------------------------------------- */
+
+.mobile-nav-toggle {
+  display: none !important;
+}
+
+/* ==========================================================
+   Desktop & Laptop Navigation
+   1001px and above
+========================================================== */
+
+@media (min-width: 1001px) {
+  .mobile-nav-toggle {
+    display: none !important;
+  }
+
   .navmenu {
     padding: 0;
   }
@@ -281,6 +299,10 @@ h6 {
     color: var(--nav-hover-color);
   }
 
+  /* --------------------------------------------------------
+     Desktop Dropdown
+  -------------------------------------------------------- */
+
   .navmenu .dropdown ul {
     margin: 0;
     padding: 10px 0;
@@ -294,7 +316,7 @@ h6 {
     transition: 0.3s;
     border-radius: 4px;
     z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   }
 
   .navmenu .dropdown ul li {
@@ -338,9 +360,18 @@ h6 {
   }
 }
 
-/* Navmenu - Mobile */
+/* ==========================================================
+   Mobile & Tablet Navigation
+   1000px and below
+========================================================== */
+
 @media (max-width: 1000px) {
+  /* --------------------------------------------------------
+     Hamburger Button
+  -------------------------------------------------------- */
+
   .mobile-nav-toggle {
+    display: block !important;
     color: var(--nav-color);
     font-size: 28px;
     line-height: 0;
@@ -349,16 +380,27 @@ h6 {
     transition: color 0.3s;
   }
 
+  /* --------------------------------------------------------
+     Navigation Container
+  -------------------------------------------------------- */
+
   .navmenu {
     padding: 0;
     z-index: 9997;
   }
 
-  .navmenu ul {
+  /* --------------------------------------------------------
+     Mobile Navigation List
+  -------------------------------------------------------- */
+
+  .navmenu > ul {
     display: none;
     list-style: none;
     position: absolute;
-    inset: 60px 20px 20px 20px;
+    top: 60px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
@@ -366,8 +408,12 @@ h6 {
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   }
+
+  /* --------------------------------------------------------
+     Mobile Links
+  -------------------------------------------------------- */
 
   .navmenu a,
   .navmenu a:focus {
@@ -417,6 +463,10 @@ h6 {
     transform: rotate(180deg);
   }
 
+  /* --------------------------------------------------------
+     Mobile Dropdown
+  -------------------------------------------------------- */
+
   .navmenu .dropdown ul {
     position: static;
     display: none;
@@ -437,6 +487,10 @@ h6 {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
+
+  /* --------------------------------------------------------
+     Mobile Menu Active
+  -------------------------------------------------------- */
 
   .mobile-nav-active {
     overflow: hidden;
@@ -462,6 +516,30 @@ h6 {
 
   .mobile-nav-active .navmenu > ul {
     display: block;
+  }
+}
+
+/* ==========================================================
+   Extra Small Screens
+   576px and below
+========================================================== */
+
+@media (max-width: 576px) {
+  .mobile-nav-toggle {
+    font-size: 26px;
+    margin-right: 5px;
+  }
+
+  .navmenu > ul {
+    left: 10px;
+    right: 10px;
+    top: 55px;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    font-size: 16px;
+    padding: 10px 16px;
   }
 }
 
