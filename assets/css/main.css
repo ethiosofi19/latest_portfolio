@@ -232,9 +232,9 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
-@media (min-width: 800px) {
+@media (min-width: 1200px) {
   .mobile-nav-toggle {
-    display: none;
+    display: none !important;
   }
   .navmenu {
     padding: 0;
