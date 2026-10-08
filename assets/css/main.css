@@ -233,6 +233,9 @@ h6 {
 --------------------------------------------------------------*/
 /* Navmenu - Desktop */
 @media (min-width: 1200px) {
+  .mobile-nav-toggle {
+    display: none !important;
+  }
   .navmenu {
     padding: 0;
   }
@@ -339,9 +342,8 @@ h6 {
 }
 
 /* Navmenu - Mobile */
-@media (max-width: 1199px) {
+@media (max-width: 1000px) {
   .mobile-nav-toggle {
-    display: none;
     color: var(--nav-color);
     font-size: 28px;
     line-height: 0;
@@ -356,7 +358,7 @@ h6 {
   }
 
   .navmenu ul {
-    /* display: none; */
+    display: none;
     list-style: none;
     position: absolute;
     inset: 60px 20px 20px 20px;
