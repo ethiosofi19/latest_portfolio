@@ -130,10 +130,28 @@
                 ><span class="typed-cursor" aria-hidden="true"></span>
               </p>
               <div class="social-links">
-                <a href="#" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
-                <a href="#" class="telegram"><i class="bi bi-telegram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                <a href="#" class="instagram"
+                <a
+                  href="https://wa.me/0931153760"
+                  class="whatsapp"
+                  target="_blank"
+                  ><i class="bi bi-whatsapp"></i
+                ></a>
+                <a
+                  href="https://t.me/ethiosofi21"
+                  class="telegram"
+                  target="_blank"
+                  ><i class="bi bi-telegram"></i
+                ></a>
+                <a
+                  href="https://linkedin.com/in/sofoniasadmassu19"
+                  target="_blank"
+                  class="linkedin"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+                <a
+                  href="https://instagram.com/ethiosofi19"
+                  class="instagram"
+                  target="_blank"
                   ><i class="bi bi-instagram"></i
                 ></a>
               </div>
@@ -212,10 +230,30 @@
                 </div>
 
                 <div class="social-connect">
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                  <a href="#"><i class="bi bi-github"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-whatsapp"></i></a>
+                  <a
+                    href="https://linkedin.com/in/sofoniasadmassu19"
+                    class="linkedin"
+                    target="_blank"
+                    ><i class="bi bi-linkedin"></i
+                  ></a>
+                  <a
+                    href="https://github.com/ethiosofi19"
+                    class="github"
+                    target="_blank"
+                    ><i class="bi bi-github"></i
+                  ></a>
+                  <a
+                    href="https://instagram.com/ethiosofi19"
+                    class="instagram"
+                    target="_blank"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
+                  <a
+                    href="https://wa.me/0931153760"
+                    class="whatsapp"
+                    target="_blank"
+                    ><i class="bi bi-whatsapp"></i
+                  ></a>
                 </div>
               </div>
             </div>
@@ -1296,10 +1334,20 @@
               iaculis eu non diam phasellus.
             </p> -->
             <div class="social-links d-flex mt-4">
-              <a href=""><i class="bi bi-github"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-              <a href=""><i class="bi bi-whatsapp"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href="https://github.com/sofoniasadmassu19" target="_blank"
+                ><i class="bi bi-github"></i
+              ></a>
+              <a
+                href="https://linkedin.com/in/sofoniasadmassu19"
+                target="_blank"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a href="https://wa.me/0931153760" target="_blank"
+                ><i class="bi bi-whatsapp"></i
+              ></a>
+              <a href="https://instagram.com/sofoniasadmassu19" target="_blank"
+                ><i class="bi bi-instagram"></i
+              ></a>
             </div>
           </div>
 
@@ -1362,14 +1410,21 @@
     </footer>
 
     <!-- Scroll Top -->
-    <!-- <a
+    <a
       href="#"
       id="scroll-top"
       class="scroll-top d-flex align-items-center justify-content-center mb-5"
+      style="
+        margin-bottom: 3%;
+        width: 2%;
+        height: 3%;
+        border-radius: 15px;
+        background-color: var(--accent-color);
+      "
       ><i class="bi bi-arrow-up-short"></i
-    ></a> -->
+    ></a>
     <!-- AI Agent Chat Widget -->
-    <!-- <div id="ai-chat-widget" class="ai-chat-widget">
+    <div id="ai-chat-widget" class="ai-chat-widget">
       <!-- Chat Window -->
       <div id="ai-chat-window" class="ai-chat-window hidden">
         <div class="ai-chat-header">
@@ -1403,7 +1458,7 @@
       <button id="ai-chat-toggle" class="ai-chat-toggle">
         <i class="bi bi-chat-dots-fill"></i>
       </button> -->
-    </div> -->
+    </div>
 
     <!-- Preloader -->
     <div id="preloader"></div>
@@ -1420,7 +1475,24 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
     <!-- Main JS File -->
+    <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Emergency Animation Jumpstart -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (typeof AOS !== "undefined") {
+          AOS.init({
+            duration: 600,
+            easing: "ease-in-out",
+            once: true,
+            mirror: false,
+          });
+        }
+      });
+    </script>
+
+    <!-- Voiceflow AI Widget -->
     <script type="text/javascript">
       (function (d, t) {
         var v = d.createElement(t),
@@ -1431,6 +1503,10 @@
             url: "https://general-runtime.voiceflow.com",
             voice: {
               url: "https://runtime-api.voiceflow.com",
+            },
+            assistant: {
+              image: "watermarked_img_16325528514213158539.jpg",
+              title: "Sofi's AI Agent",
             },
           });
         };
