@@ -124,7 +124,7 @@
               <p>
                 I'm a
                 <span
-                  class="typed"
+                  class="typed color-primary"
                   data-typed-items="Full Stack Developer, Web Designer, Freelancer, Dreamer, Creator, Innovator, Problem Solver, Tech Enthusiast"
                 ></span
                 ><span class="typed-cursor" aria-hidden="true"></span>
@@ -1362,12 +1362,48 @@
     </footer>
 
     <!-- Scroll Top -->
-    <a
+    <!-- <a
       href="#"
       id="scroll-top"
-      class="scroll-top d-flex align-items-center justify-content-center"
+      class="scroll-top d-flex align-items-center justify-content-center mb-5"
       ><i class="bi bi-arrow-up-short"></i
-    ></a>
+    ></a> -->
+    <!-- AI Agent Chat Widget -->
+    <div id="ai-chat-widget" class="ai-chat-widget">
+      <!-- Chat Window -->
+      <div id="ai-chat-window" class="ai-chat-window hidden">
+        <div class="ai-chat-header">
+          <div class="ai-header-info">
+            <i class="bi bi-robot"></i>
+            <span>Sofi's AI Agent</span>
+          </div>
+          <button id="close-chat-btn" class="close-btn">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <div id="ai-chat-messages" class="ai-chat-messages">
+          <!-- Default Greeting -->
+          <div class="chat-message ai-message">
+            Hi there! I'm an AI assistant trained to know all about Sofonias's
+            work as a self-taught web developer. Ask me anything about the
+            MedFinder project, his tech stack, or how to get in touch!
+          </div>
+        </div>
+        <div class="ai-chat-input-area">
+          <input
+            type="text"
+            id="ai-chat-input"
+            placeholder="Ask about my skills or projects..."
+          />
+          <button id="ai-send-btn"><i class="bi bi-send-fill"></i></button>
+        </div>
+      </div>
+
+      <!-- Floating Toggle Button
+      <button id="ai-chat-toggle" class="ai-chat-toggle">
+        <i class="bi bi-chat-dots-fill"></i>
+      </button> -->
+    </div>
 
     <!-- Preloader -->
     <div id="preloader"></div>
@@ -1385,5 +1421,23 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script type="text/javascript">
+      (function (d, t) {
+        var v = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        v.onload = function () {
+          window.voiceflow.chat.load({
+            verify: { projectID: "6ac820332ad8050d124c5691" },
+            url: "https://general-runtime.voiceflow.com",
+            voice: {
+              url: "https://runtime-api.voiceflow.com",
+            },
+          });
+        };
+        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+        v.type = "text/javascript";
+        s.parentNode.insertBefore(v, s);
+      })(document, "script");
+    </script>
   </body>
 </html>
